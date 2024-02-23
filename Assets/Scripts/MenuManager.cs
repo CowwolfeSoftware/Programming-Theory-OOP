@@ -37,11 +37,6 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void OnLesson2Click()
-    {
-        SceneManager.LoadScene(2);
-    }
-
     public void OnLessonQuitClick()
     {
         SceneManager.LoadScene(0);

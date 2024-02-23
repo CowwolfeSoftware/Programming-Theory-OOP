@@ -240,7 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae83f44d2eed421b907d483d065c2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  username: {fileID: 514255725}
+  usernameInput: {fileID: 514255725}
+  raceTeamInput: {fileID: 1462386013}
 --- !u!1 &79784597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,6 +2022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerName: 
+  RaceTeamName: 
 --- !u!4 &1403070466
 Transform:
   m_ObjectHideFlags: 0
