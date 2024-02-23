@@ -9,7 +9,7 @@ public class Lesson1Manager : MonoBehaviour
     // Start is called once before any Update methods are called
     void Start()
     {
-        RaceTeamText.text = PlayerSettings.Instance.RaceTeamName;    
+        RaceTeamText.text = PlayerSettings.Instance?.RaceTeamName;   
     }
 
     public void OnLesson2Click()
