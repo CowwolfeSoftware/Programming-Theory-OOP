@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using UnityEditor.Build;
 using UnityEngine;
-using UnityEngine.Rendering;
+
 
 public class PlayerSettings : MonoBehaviour
 {
@@ -12,10 +9,31 @@ public class PlayerSettings : MonoBehaviour
     public static PlayerSettings Instance {get; private set;}
     
     [HideInInspector]
-    public string PlayerName;
-
+    public string PlayerName
+    {
+        get { return _playerName; }
+        set 
+        { 
+            if(value.Length > 8)
+                _playerName = value[..8];
+            else
+                _playerName = value;
+        }
+    }
+    private string _playerName;
     [HideInInspector]
-    public string RaceTeamName;
+    public string RaceTeamName
+    {
+        get { return _raceTeamName; }
+        set 
+        { 
+            if(value.Length > 8)
+                _raceTeamName = value[..8];
+            else
+                _raceTeamName = value;
+        }
+    }
+    public string _raceTeamName;
 
     // Awake is called once when object is created.
     void Awake()

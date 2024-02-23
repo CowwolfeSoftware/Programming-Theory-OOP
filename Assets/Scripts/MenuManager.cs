@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -25,11 +22,13 @@ public class MenuManager : MonoBehaviour
     private void OnEndEditRaceTeam(string raceTeam)
     {
         PlayerSettings.Instance.RaceTeamName = raceTeam;
+        raceTeamInput.text = PlayerSettings.Instance.RaceTeamName;
     }
 
     private void OnEndEditName(string name)
     {
         PlayerSettings.Instance.PlayerName = name;
+        usernameInput.text = PlayerSettings.Instance.PlayerName;
     }
 
     public void OnStartClick()

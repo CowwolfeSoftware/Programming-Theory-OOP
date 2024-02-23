@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class TeamMember : MonoBehaviour
@@ -14,6 +11,11 @@ public abstract class TeamMember : MonoBehaviour
 
     public abstract string GetTask();
     public abstract string GetTitle();
+
+    public virtual void Awake()
+    {
+        RacingTeam = PlayerSettings.Instance.RaceTeamName;
+    }
 
     public void ShowDescription()
     {
