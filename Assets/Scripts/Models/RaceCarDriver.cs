@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
@@ -16,13 +14,14 @@ public class RaceCarDriver : Driver
         get { return PlayerSettings.Instance.PlayerName; }
     }
 
-    void Awake()
+    public override void Awake()
     {
         RacesWon = 10;
         RacesLost = 2;
         CanDriveAutomatic = true;
         CanDriveManual = false;
         AddMilesDriven(5200);
+        base.Awake();
     }
 
     public int GetTotalRaces()
@@ -34,6 +33,7 @@ public class RaceCarDriver : Driver
     {
         StringBuilder desc = new();
         desc.AppendLine("Race Car Driver:");
+        desc.AppendLine("  Race Team: " + RacingTeam);
         desc.AppendLine("  Races Won: " + RacesWon);
         desc.AppendLine("  Races Lost: " + RacesLost);
         desc.AppendLine("  Total Races: " + GetTotalRaces());

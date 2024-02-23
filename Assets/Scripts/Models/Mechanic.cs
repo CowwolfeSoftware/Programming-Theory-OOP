@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Text;
 
 public class Mechanic : TeamMember
@@ -13,6 +11,7 @@ public class Mechanic : TeamMember
     {
         StringBuilder desc = new();
         desc.AppendLine("Mechanic:");
+        desc.AppendLine("  Race Team: " + RacingTeam);
         desc.AppendLine("  Is Engine Specialist: " + EngineSpecialist);
         desc.AppendLine("  Is Electrical Specialist: " + ElectricalSpecialist);
         desc.AppendLine("  Is Alignment Specialist: " + AlignmentSpecialist);
