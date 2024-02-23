@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// INHERITANCE
 public abstract class Driver : TeamMember
 {
     [HideInInspector]

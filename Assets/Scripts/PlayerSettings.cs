@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class PlayerSettings : MonoBehaviour
 {
+    // ABSTRACTION
     [HideInInspector]
     public static PlayerSettings Instance {get; private set;}
     
     [HideInInspector]
+    // ENCAPSULATION
     public string PlayerName
     {
         get { return _playerName; }
@@ -22,6 +24,7 @@ public class PlayerSettings : MonoBehaviour
     }
     private string _playerName;
     [HideInInspector]
+    // ENCAPSULATION
     public string RaceTeamName
     {
         get { return _raceTeamName; }
