@@ -1,8 +1,9 @@
 using System.Text;
 
-
+// INHERITANCE
 public class DriverObject : Driver
-{    
+{   
+    // POLYMORPHISM 
     public override string GetTask()
     {
         StringBuilder desc = new();

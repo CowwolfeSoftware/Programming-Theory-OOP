@@ -6,6 +6,7 @@ public abstract class TeamMember : MonoBehaviour
     public TMP_Text DescriptionText;
     public TMP_Text Title;
 
+    // ABSTRACTION
     [HideInInspector]
     public string RacingTeam;
 

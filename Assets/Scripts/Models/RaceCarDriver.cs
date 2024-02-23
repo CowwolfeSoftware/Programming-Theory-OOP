@@ -1,19 +1,24 @@
 using System.Text;
 using UnityEngine;
 
+// INHERITANCE
 public class RaceCarDriver : Driver
 {
+    // ABSTRACTION
     [HideInInspector]
     public int RacesWon {get; private set;}
+    // ABSTRACTION
     [HideInInspector]
     public int RacesLost {get; private set;}
 
+    // ABSTRACTION
     [HideInInspector]
     public string DriverName 
     {
         get { return PlayerSettings.Instance.PlayerName; }
     }
 
+    // POLYMORPHISM
     public override void Awake()
     {
         RacesWon = 10;
@@ -29,6 +34,7 @@ public class RaceCarDriver : Driver
         return RacesLost + RacesWon;
     }
     
+    // POLYMORPHISM
     public override string GetTask()
     {
         StringBuilder desc = new();

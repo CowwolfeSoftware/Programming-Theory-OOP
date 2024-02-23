@@ -1,5 +1,6 @@
 using System.Text;
 
+// INHERITANCE
 public class Mechanic : TeamMember
 {
     public bool EngineSpecialist;
@@ -7,6 +8,7 @@ public class Mechanic : TeamMember
     public bool AlignmentSpecialist;
     public bool BodySpecialist;
 
+    // POLYMORPHISM
     public override string GetTask()
     {
         StringBuilder desc = new();
@@ -22,6 +24,7 @@ public class Mechanic : TeamMember
         return desc.ToString();
     }
 
+    // POLYMORPHISM
     public override string GetTitle()
     {
         return "Mechanic";
