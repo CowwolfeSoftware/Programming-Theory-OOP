@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,23 +11,34 @@ public class DriverObject : Driver
     
     public override string GetTask()
     {
-        return "N/A";
+        StringBuilder desc = new();
+        desc.AppendLine("Driver (Base Class)");
+        desc.AppendLine("All driver types should derive from this class.");
+        desc.AppendLine();
+        desc.AppendLine("Driver is derived from TeamMember");
+
+        return desc.ToString();
     }
 
-    void OnMouseOver()
+    public override string GetTitle()
     {
-         ShowDriverPanel();
+        return "Driver";
     }
 
-    void Start()
-    {
-        TeamMemberPanel.SetActive(false);
-        DriverPanel.SetActive(false); 
-    }
+    // void OnMouseOver()
+    // {
+    //      ShowDriverPanel();
+    // }
 
-    void ShowDriverPanel()
-    {
-        TeamMemberPanel.SetActive(false);
-        DriverPanel.SetActive(true); 
-    }
+    // void Start()
+    // {
+    //     TeamMemberPanel?.SetActive(false);
+    //     DriverPanel?.SetActive(false); 
+    // }
+
+    // void ShowDriverPanel()
+    // {
+    //     TeamMemberPanel.SetActive(false);
+    //     DriverPanel.SetActive(true); 
+    // }
 }

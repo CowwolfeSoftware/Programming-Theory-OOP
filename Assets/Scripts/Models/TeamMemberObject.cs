@@ -1,31 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEditor.Search;
 using UnityEngine;
 
 public class TeamMemberObject : TeamMember
 {
-    public GameObject TeamMemberPanel;
-    public GameObject DriverPanel;
     public override string GetTask()
     {
-        return "N/A";
+        StringBuilder desc = new();
+        desc.AppendLine("Team Member (Base Class)");
+        desc.AppendLine();
+        desc.AppendLine("TestMember is the lowest base class; everything derives from this.");
+
+        return desc.ToString();
     }
 
-    void Start()
+    public override string GetTitle()
     {
-        TeamMemberPanel.SetActive(false);
-        DriverPanel.SetActive(false); 
-    }
-
-    void OnMouseOver()
-    {
-         ShowTeamMemberPanel();
-    }
-
-    void ShowTeamMemberPanel()
-    {
-        TeamMemberPanel.SetActive(true);
-        DriverPanel.SetActive(false); 
+        return "TeamMember";
     }
 }
